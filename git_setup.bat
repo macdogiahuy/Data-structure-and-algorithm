@@ -42,14 +42,6 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 
-:: Add GitHub remote
-git remote add origin %REPO_URL%
-if %ERRORLEVEL% neq 0 (
-    echo Error: Failed to add remote repository
-    pause
-    exit /b 1
-)
-
 :: Push to GitHub
 git push -u origin main
 if %ERRORLEVEL% neq 0 (
